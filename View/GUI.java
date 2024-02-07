@@ -26,8 +26,7 @@ public class GUI implements IGUI {
         int opcion =leeNumero("¿Que desea hacer?");
 
         return opcion;
-        }
-
+    }
 
 
     @Override
