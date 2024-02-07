@@ -20,16 +20,11 @@ public class GUI implements IGUI {
 
     @Override
     public int switchList() {
-        int opcion = leeNumero("¿Que desea hacer?");
-        switch (opcion) {
-            case 1:
-                System.out.println("Listar favoritos ");
 
-                break;
-            case 2:
-                System.out.println("Listar todos ");
-                break;
-        }
+        System.out.println("1. Listar favoritos ");
+        System.out.println("2. Listar todos ");
+        int opcion =leeNumero("¿Que desea hacer?");
+
         return opcion;
     }
 
