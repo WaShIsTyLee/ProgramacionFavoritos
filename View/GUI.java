@@ -20,31 +20,27 @@ public class GUI implements IGUI {
 
     @Override
     public int switchList() {
-            int opcion =leeNumero("¿Que desea hacer?");
-            switch (opcion){
-                case 1:
-                    System.out.println("Listar favoritos ");
 
-                    break;
-                case 2:
-                    System.out.println("Listar todos ");
-                    break;
-            }
-            return opcion;
+        System.out.println("1. Listar favoritos ");
+        System.out.println("2. Listar todos ");
+        int opcion =leeNumero("¿Que desea hacer?");
+
+        return opcion;
         }
 
 
 
     @Override
-    public void mostrarMenuPrincipal() {
+    public int mostrarMenuPrincipal() {
         System.out.println("----------------------------------");
         System.out.println("|       1.Listar favoritos       |");
-        System.out.println("|      3.Insertar favoritos      |");
-        System.out.println("|     4.Actualizar favoritos     |");
-        System.out.println("|       5.Borrar favoritos       |");
-        System.out.println("|             6.Salir            |");
+        System.out.println("|      2.Insertar favoritos      |");
+        System.out.println("|     3.Actualizar favoritos     |");
+        System.out.println("|       4.Borrar favoritos       |");
+        System.out.println("|             5.Salir            |");
         System.out.println("----------------------------------");
-
+        int opcion = leeNumero("Inserte una opción");
+        return opcion;
     }
 
     @Override
