@@ -3,6 +3,8 @@ package Model.Repo;
 import Interface.ILibrary;
 import Model.Entity.Favs;
 
+import java.util.Arrays;
+
 public class Library implements ILibrary {
     private Favs[] favs;
     private static final int Tam = 10;
@@ -49,7 +51,10 @@ public class Library implements ILibrary {
                 if (favs[i] == null) {
                     favs[i] = fav;
                     result = true;
-                    break;
+                    if (result==true){
+                        System.out.println("Tu favorito ha sido añadido");
+                        break;
+                    }
                 }
             }
         }
@@ -65,5 +70,12 @@ public class Library implements ILibrary {
             result = true;
         }
         return result;
+    }
+
+    @Override
+    public String toString() {
+        return "Library{" +
+                "favs=" + Arrays.toString(favs) +
+                '}';
     }
 }

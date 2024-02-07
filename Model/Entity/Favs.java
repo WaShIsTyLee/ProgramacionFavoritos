@@ -37,4 +37,11 @@ public class Favs {
         return Objects.equals(getName(), favs.getName()) && Objects.equals(getID(), favs.getID());
     }
 
+    @Override
+    public String toString() {
+        return "Favs{" +
+                "name='" + name + '\'' +
+                ", ID='" + ID + '\'' +
+                '}';
+    }
 }
