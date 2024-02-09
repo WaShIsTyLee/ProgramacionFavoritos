@@ -27,11 +27,10 @@ public class Song extends Favs{
 
     @Override
     public String toString() {
-        return "Song{" +
-                "artist='" + artist + '\'' +
-                ", name='" + name + '\'' +
-                ", ID='" + ID + '\'' +
-                '}';
+        return "Cancion: " + "\n" +
+                "Artista: " + artist + "\n" +
+                "Nombre: " + name + "\n" +
+                "ID: " + ID + "\n";
     }
 
     @Override

@@ -27,11 +27,10 @@ public class Movie extends Favs {
 
     @Override
     public String toString() {
-        return "Movie{" +
-                "gender='" + gender + '\'' +
-                ", name='" + name + '\'' +
-                ", ID='" + ID + '\'' +
-                '}';
+        return "Pelicula: " + "\n" +
+                "Genero: " + gender + "\n" +
+                "Nombre: " + name + "\n" +
+                "ID: " + ID + "\n";
     }
 
     @Override

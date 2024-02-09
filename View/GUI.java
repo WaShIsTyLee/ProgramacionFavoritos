@@ -55,24 +55,44 @@ public class GUI implements IGUI {
 
     @Override
     public int leeNumero(String msg) {
+        boolean aux = false;
+        int numero = 0;
         Scanner teclado = new Scanner(System.in);
-        System.out.print(msg + ": ");
-        return teclado.nextInt();
+        do {
+            System.out.print(msg + ": ");
+            try {
+                numero = teclado.nextInt();
+                aux = true;
+            } catch (java.util.InputMismatchException e) {
+                System.out.println("Entrada inválida. Introduce un número válido.");
+                teclado.next();
+            }
+        } while (!aux);
 
+        return numero;
     }
 
     @Override
     public String leeString(String msg) {
+        String entrada = "";
         Scanner teclado = new Scanner(System.in);
-        System.out.print(msg + ": ");
-        return teclado.nextLine();
 
+        do {
+            System.out.print(msg + ": ");
+            try {
+                entrada = teclado.nextLine();
+            } catch (Exception e) {
+                teclado.next();
+            }
+        } while (entrada.isEmpty());
+
+        return entrada;
     }
 
-    @Override
-    public Favs mostrarAñadirBorrarFavorito(int opcion) {
-        Favs result;
 
+    @Override
+    public Favs mostrarAñadirFavorito(int opcion) {
+        Favs result;
 
         switch (opcion) {
             case 1:
@@ -85,7 +105,7 @@ public class GUI implements IGUI {
                 result = new Song("", "", "");
         }
         result.setName(leeString("Inserte el nombre del favorito"));
-        result.setID(leeString("Inserte el ID "));
+
         if (opcion == 1) {
             ((Game) result).setPrice(leeNumero("Inserte el precio de su juego"));
 

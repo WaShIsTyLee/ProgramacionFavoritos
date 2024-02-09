@@ -1,6 +1,8 @@
 package Model.Entity;
 
 import java.util.Objects;
+import java.util.Random;
+import java.util.UUID;
 
 public class Favs {
     protected String name;
@@ -8,7 +10,7 @@ public class Favs {
 
     public Favs(String name, String ID) {
         this.name = name;
-        this.ID = ID;
+        this.ID = generateRandomID();
     }
     public Favs(){
         this("","");
@@ -37,11 +39,16 @@ public class Favs {
         return Objects.equals(getName(), favs.getName()) && Objects.equals(getID(), favs.getID());
     }
 
+    private String generateRandomID() {
+        int randomNumber = new Random().nextInt(9000) + 1000;
+        char randomLetter = (char) ('A' + new Random().nextInt(26));
+        return String.format("%d%c", randomNumber, randomLetter);
+    }
+
     @Override
     public String toString() {
-        return "Favs{" +
-                "name='" + name + '\'' +
-                ", ID='" + ID + '\'' +
-                '}';
+        return "Tu favorito: " +
+                "NOMBRE---> "+name + '\'' +
+                "ID---> " + ID + '\'';
     }
 }
