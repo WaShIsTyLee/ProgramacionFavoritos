@@ -27,6 +27,7 @@ public class Controller {
                     }
                     break;
                 case 2:
+
                     library.añadirFavorito(gui.mostrarAñadirFavorito(gui.mostrarMenuFavoritos()));
                     break;
                 case 3:
@@ -41,5 +42,6 @@ public class Controller {
         }
         while (opcion != 5);
         System.out.println("CABRON TU");
+
     }
 }
