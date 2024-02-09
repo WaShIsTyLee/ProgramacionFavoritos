@@ -27,11 +27,10 @@ public class Game extends Favs {
 
     @Override
     public String toString() {
-        return "Game{" +
-                "price=" + price +
-                ", name='" + name + '\'' +
-                ", ID='" + ID + '\'' +
-                '}';
+        return "Juego: " + "\n" +
+                "Precio: " + price + "\n" +
+                "Nombre: " + name + "\n" +
+                "ID: " + ID + "\n";
     }
 
     @Override

@@ -9,6 +9,6 @@ public interface IGUI {
     int mostrarMenuFavoritos();
     int leeNumero(String msg);
     String leeString(String msg);
-    Favs mostrarAñadirBorrarFavorito(int opcion);
+    Favs mostrarAñadirFavorito(int opcion);
 
 }

@@ -27,20 +27,21 @@ public class Controller {
                     }
                     break;
                 case 2:
-                    library.añadirFavorito(gui.mostrarAñadirBorrarFavorito(gui.mostrarMenuFavoritos()));
+
+                    library.añadirFavorito(gui.mostrarAñadirFavorito(gui.mostrarMenuFavoritos()));
                     break;
                 case 3:
-
+                    library.actualizarFavorito(gui.leeString("Dame el nombre del favorito para actualizar"));
                     break;
                 case 4:
-                    library.borrarFavorito(gui.mostrarAñadirBorrarFavorito(gui.mostrarMenuFavoritos()));
+                    library.borrarFavorito(gui.leeString("Dame tu ID"));
                     break;
                 case 5:
                     break;
-
-
             }
         }
         while (opcion != 5);
+        System.out.println("CABRON TU");
+
     }
 }
