@@ -64,10 +64,17 @@ public class Library implements ILibrary {
     @Override
     public boolean borrarFavorito(Favs fav) {
         boolean result = false;
-        int pos = getPosFav(fav);
-        if (pos != -1) {
-            favs[pos] = null;
-            result = true;
+        if (getPosFav(fav) != -1) {
+            for (int i = 0; i < favs.length; i++) {
+                if (favs[i].equals(fav)) {
+                    favs[i] = null;
+                    result = true;
+                    if (result==true){
+                        System.out.println("Tu favorito ha sido borrado");
+                        break;
+                    }
+                }
+            }
         }
         return result;
     }
