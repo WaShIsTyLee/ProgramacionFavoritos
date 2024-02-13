@@ -1,8 +1,9 @@
 package Model.Entity;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Game extends Favs {
+public class Game extends Favs  implements Serializable {
     private float price;
 
     public Game(String name, String ID, float price) {

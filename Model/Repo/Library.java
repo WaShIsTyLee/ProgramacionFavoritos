@@ -2,11 +2,13 @@ package Model.Repo;
 
 import Interface.ILibrary;
 import Model.Entity.Favs;
+import Persistence.Serializator;
 import View.GUI;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
-public class Library implements ILibrary {
+public class Library implements ILibrary, Serializable {
     GUI gui = new GUI();
     private Favs[] favs;
     private static final int Tam = 10;
@@ -16,6 +18,11 @@ public class Library implements ILibrary {
         favs = new Favs[Tam];
     }
 
+
+    /**
+     * Funcion para listar favoritos del array por el nombre que se le inserte
+     * @param nombre
+     */
     @Override
     public void listarFavorito(String nombre) {
         for (int i = 0; i < this.favs.length; i++) {
@@ -25,6 +32,9 @@ public class Library implements ILibrary {
         }
     }
 
+    /**
+     * Funcion que lista todos los favoritos del array
+     */
     @Override
     public void listarFavoritos() {
         for (int i = 0; i < this.favs.length; i++) {
@@ -34,6 +44,11 @@ public class Library implements ILibrary {
         }
     }
 
+    /**
+     * Actualiza el parametro nombre de un favorito previamente añadido
+     * @param nombre
+     * @return
+     */
     @Override
     public boolean actualizarFavorito(String nombre) {
         for (int i = 0; i < favs.length; i++) {
@@ -44,7 +59,11 @@ public class Library implements ILibrary {
         return true;
     }
 
-
+    /**
+     * Funcion privada para ver si el Fav esta en el array
+     * @param fav
+     * @return
+     */
     private int isFav(Favs fav) {
         int result = -1;
         boolean found = false;

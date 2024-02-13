@@ -1,8 +1,9 @@
 package Model.Entity;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Song extends Favs{
+public class Song extends Favs implements Serializable {
     private String artist;
 
     public Song(String name, String ID, String artist) {
