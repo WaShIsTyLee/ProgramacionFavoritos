@@ -99,6 +99,7 @@ public class Library implements ILibrary, Serializable {
     @Override
     public boolean borrarFavorito(String ID) {
         boolean result = false;
+
         for (int i = 0; i < favs.length; i++) {
             if (favs[i] != null && favs[i].getID().equals(ID)) {
                 favs[i] = null;
@@ -107,6 +108,7 @@ public class Library implements ILibrary, Serializable {
         }
         if (result) {
             System.out.println("Tu favorito ha sido borrado");
+
         }
         return result;
     }

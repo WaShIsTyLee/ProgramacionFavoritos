@@ -40,6 +40,7 @@ public class Controller implements IController {
                     }
                     break;
                 case 2:
+
                     library.añadirFavorito(gui.mostrarAñadirFavorito(gui.mostrarMenuFavoritos()));
                     Serializator.serialize(library, "CARGADOS.bin");
 
