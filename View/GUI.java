@@ -9,6 +9,11 @@ import Model.Entity.Song;
 import java.util.Scanner;
 
 public class GUI implements IGUI {
+
+    /*
+    Funcion que imprime un mensaje de inicio
+
+     */
     @Override
     public void mostrarInicio() {
         System.out.println("*******************************************");
@@ -18,6 +23,11 @@ public class GUI implements IGUI {
         System.out.println("*******************************************");
     }
 
+
+    /**
+     * Muestra menú de elección de listar
+     * @return la opción elegida por el usuario
+     */
     @Override
     public int switchList() {
 
@@ -29,6 +39,10 @@ public class GUI implements IGUI {
     }
 
 
+    /**
+     * mostrar menú del CRUD a elegir
+     * @return opcion elegida por el usuario
+     */
     @Override
     public int mostrarMenuPrincipal() {
         System.out.println("----------------------------------");
@@ -42,6 +56,11 @@ public class GUI implements IGUI {
         return opcion;
     }
 
+
+    /**
+     * mostrar menu de elección de favoritos
+     * @return elección elegida por el usuario
+     */
     @Override
     public int mostrarMenuFavoritos() {
         System.out.println("----------------------------------");
@@ -53,6 +72,12 @@ public class GUI implements IGUI {
         return opcion;
     }
 
+
+    /**
+     * recoge un número introducido por pantalla
+     * @param msg mensaje que quieres que se muestre por pantalla a la hora de recoger el número
+     * @return el número recogido por el usuario
+     */
     @Override
     public int leeNumero(String msg) {
         boolean aux = false;
@@ -72,6 +97,12 @@ public class GUI implements IGUI {
         return numero;
     }
 
+
+    /**
+     * recoge un String introducido por pantalla
+     * @param msg mensaje que quieres que se muestre por pantalla a la hora de recoger el String
+     * @return el String recogido por el usuario
+     */
     @Override
     public String leeString(String msg) {
         String entrada = "";
@@ -90,6 +121,11 @@ public class GUI implements IGUI {
     }
 
 
+    /**
+     * Añade un favorito al array de favoritos
+     * @param opcion le entra la opcion de que favorito desea añadir
+     * @return un favorito relleno
+     */
     @Override
     public Favs mostrarAñadirFavorito(int opcion) {
         Favs result;
