@@ -113,6 +113,7 @@ public class GUI implements IGUI {
             ((Movie) result).setGender(leeString("Inserte el género de la película"));
         } else {
             ((Song) result).setArtist(leeString("Inserte el artista de la canción"));
+
         }
         return result;
 

@@ -1,8 +1,9 @@
 package Model.Entity;
 
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Movie extends Favs {
+public class Movie extends Favs implements Serializable {
     private String gender;
 
     public Movie(String name, String ID, String gender) {

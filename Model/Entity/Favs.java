@@ -1,10 +1,11 @@
 package Model.Entity;
 
+import java.io.Serializable;
 import java.util.Objects;
 import java.util.Random;
 import java.util.UUID;
 
-public class Favs {
+public class Favs implements Serializable {
     protected String name;
     protected String ID;
 
@@ -39,6 +40,10 @@ public class Favs {
         return Objects.equals(getName(), favs.getName()) && Objects.equals(getID(), favs.getID());
     }
 
+    /**
+     * Funcion que crea aleatoriamente una ID
+     * @return ID
+     */
     private String generateRandomID() {
         int randomNumber = new Random().nextInt(9000) + 1000;
         char randomLetter = (char) ('A' + new Random().nextInt(26));
